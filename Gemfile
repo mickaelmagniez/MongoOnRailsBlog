@@ -16,3 +16,4 @@ gem "hpricot", :group => :development
 gem "formtastic"
 gem "jquery-rails"
 
+gem "heroku"
