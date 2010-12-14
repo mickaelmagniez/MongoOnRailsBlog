@@ -3,6 +3,5 @@
 - @articles.each do |article|
   %article
     = render :partial => 'articles/article', :object => article
-    .clearfix
 = will_paginate @articles
 = link_to 'New Article', new_article_path
