@@ -46,7 +46,12 @@ EOF
         return count;
       }
 EOF
-    collection.map_reduce(map,reduce).find()
+    if Mongoid.master.collection(collection.name).count != 0
+      collection.map_reduce(map,reduce).find()
+    else
+      []
+    end
+      
   end
 
   validates_presence_of :title, :body
