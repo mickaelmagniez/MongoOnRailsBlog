@@ -1,0 +1,11 @@
+= semantic_form_for @article do |f|
+  = f.inputs do
+    = f.input :title
+    = f.input :body, :as => :text
+    - if @article.tags
+      = f.input :tags, :input_html => {:value => @article.tags.join(',')}
+    - else
+      = f.input :tags
+  = f.buttons do
+    = f.commit_button
+

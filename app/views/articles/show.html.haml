@@ -1,0 +1,31 @@
+%article
+  %h2.title= @article.title
+  .body
+    = @article.body
+  %ul.tags
+    - @article.tags.each do |tag|
+      %li
+        = "[#{tag}]"
+  .infos
+    = "#{@article.published_at}"
+    -if @article.user
+      = "By #{@article.user.name}"
+  .clearfix
+  .links= link_to 'Edit', edit_article_path(@article)
+
+  - if @article.comments.size > 0
+    %ul.comments
+      - @article.comments.each do |comment|
+        %li.comment
+          %h3.title=comment.title
+          %p.body=comment.body
+          -if comment.user
+            %p.author= "By #{comment.user.name}"
+
+%h1 New Comment
+= semantic_form_for [@article, Comment.new] do |f|
+  = f.inputs do
+    = f.input :title
+    = f.input :body, :as => :text
+  = f.buttons do
+    = f.commit_button

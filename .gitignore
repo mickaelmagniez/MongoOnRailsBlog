@@ -4,3 +4,4 @@ log/*.log
 tmp/**/*
 Gemfile.lock
 nbproject/
+.sass-cache/

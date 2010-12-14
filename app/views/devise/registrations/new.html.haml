@@ -1,0 +1,10 @@
+= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+  = devise_error_messages!
+  = f.inputs do
+    = f.input :name
+    = f.input :email, :as => :email
+    = f.input :password, :as => :password
+    = f.input :password_confirmation, :as => :password
+  = f.buttons do
+    = f.commit_button
+= render :partial => "devise/shared/links"

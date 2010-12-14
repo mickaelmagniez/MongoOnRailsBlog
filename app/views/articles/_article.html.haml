@@ -1,0 +1,19 @@
+%h2.title= article.title
+.body
+  = article.body
+-if article.tags
+  %ul.tags
+    - article.tags.each do |tag|
+      %li
+        = link_to tag, articles_by_tag_path(tag)
+.infos
+  = "#{article.published_at}"
+  -if article.user
+    By
+    = link_to article.user.name, articles_by_author_path(article.user)
+.clearfix
+%ul.links
+  %li= link_to 'Show', article
+  - if article.user && current_user && current_user.id == article.user.id
+    %li= link_to 'Edit', edit_article_path(article)
+    %li= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete

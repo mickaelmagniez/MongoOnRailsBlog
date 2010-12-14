@@ -1,0 +1,8 @@
+%h1= "Listing articles for user #{@author.name}"
+
+- @articles.each do |article|
+  %article
+    = render :partial => 'articles/article', :object => article
+    .clearfix
+
+= link_to 'New Article', new_article_path

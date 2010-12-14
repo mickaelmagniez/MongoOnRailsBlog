@@ -1,0 +1,5 @@
+%ul.tagcloud
+  - Article.tag_cloud.each do |tag|
+    %li{:style => "font-size: #{tag['value']}em"}
+      %a{:href => "#"}
+        = link_to tag["_id"], articles_by_tag_path(tag["_id"])

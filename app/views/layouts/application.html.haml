@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title Blog
+    = stylesheet_link_tag :all
+    = javascript_include_tag :all
+    = csrf_meta_tag
+  %body
+    %header
+      = render :partial => 'layouts/header'
+    %section.content
+      %p#notice= notice
+      %p#alert= alert
+      = yield
+    %section.right
+      = render :partial => 'layouts/right'
+    %footer

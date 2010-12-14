@@ -1,0 +1,181 @@
+@charset "UTF-8";
+html {
+  font-family: Calibri, Georgia, Arial; }
+
+body {
+  width: 980px;
+  margin: 0 auto; }
+
+a {
+  text-decoration: none;
+  color: #01547f; }
+
+.clearfix {
+  clear: both; }
+
+.round, header, form, input[type=text], input[type=password], textarea, article, article .comment {
+  border: 2px solid #AAA;
+  border-radius: 10px 10px;
+  -moz-border-radius: 10px 10px;
+  -webkit-box-shadow: 2px 2px 2px #333333;
+  -moz-box-shadow: 2px 2px 2px #333333; }
+
+.gradient, input[type=text], input[type=password], textarea, article, article .comment {
+  background: #f7f7f7;
+  background: -moz-linear-gradient(90deg, #cccccc, white);
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#cccccc)); }
+
+section.content {
+  width: 600px;
+  float: left; }
+section.right {
+  width: 340px;
+  margin: 20px;
+  float: left; }
+
+header {
+  border: 2px solid #01547f;
+  display: block;
+  height: 40px;
+  margin: 10px 20px;
+  padding: 10px; }
+  header h1 {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: Cambria, Georgia, Arial;
+    padding-top: 5px; }
+  header #userbar {
+    float: right; }
+
+form {
+  margin: 20px auto;
+  padding: 20px;
+  width: 440px; }
+
+h1 {
+  border-bottom: 1px solid #cccccc;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-transform: uppercase; }
+
+form p {
+  margin-bottom: 20px; }
+  form p:last-child {
+    margin-bottom: 0; }
+
+label {
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 28px;
+  margin-bottom: 5px;
+  width: 80px; }
+
+form p:hover label {
+  color: #01547f; }
+  form p:hover label:after {
+    content: " »"; }
+
+input[type=text], input[type=password] {
+  padding: 5px;
+  width: 300px; }
+
+textarea {
+  padding: 5px;
+  width: 300px;
+  height: 150px; }
+
+.input, input[type=text]:focus, input[type=password]:focus, textarea:focus, select, select:active, select:focus {
+  border-color: #093c75;
+  -moz-box-shadow: 0 0 3px #0459b7;
+  -webkit-box-shadow: 0 0 3px #0459b7;
+  outline: none; }
+
+select {
+  cursor: pointer;
+  padding: 3px; }
+
+input[type=submit] {
+  background: #dddddd;
+  background: -moz-linear-gradient(90deg, #01547f, #528ba8);
+  background: -webkit-gradient(linear, left top, left bottom, from(#01547f), to(#528ba8));
+  border: 1px solid #093c75;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-box-shadow: 0 1px 0 white;
+  -webkit-box-shadow: 0 1px 0 white;
+  color: white;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 315px;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-shadow: 0 1px 1px #333333;
+  text-transform: uppercase; }
+  input[type=submit]:hover {
+    background: #eeeeee;
+    background: -moz-linear-gradient(90deg, #067cd3, #0bcdff);
+    background: -webkit-gradient(linear, left top, left bottom, from(#0bcdff), to(#067cd3));
+    border-color: #093c75;
+    text-decoration: none; }
+  input[type=submit]:active, input[type=submit]:focus {
+    background: #cccccc;
+    background: -moz-linear-gradient(90deg, #0bcdff, #067cd3);
+    background: -webkit-gradient(linear, left top, left bottom, from(#067cd3), to(#0bcdff));
+    border-color: #093c75;
+    outline: none; }
+
+article ul.links {
+  clear: both; }
+  article ul.links li {
+    float: left;
+    margin: 0 10px; }
+
+section.right ul.tagcloud {
+  clear: both; }
+  section.right ul.tagcloud li {
+    display: block;
+    float: left;
+    margin: 0 5px; }
+
+article {
+  display: block;
+  padding: 10px;
+  width: 580px;
+  margin: 20px 0; }
+  article h2.title {
+    color: #01547f;
+    font-size: 2em;
+    font-weight: bold;
+    margin: 0 0 5px 0; }
+  article .tags li {
+    float: left;
+    margin: 0 10px; }
+  article .infos {
+    float: right; }
+  article .comments {
+    clear: both;
+    margin: 20px; }
+  article .links {
+    float: right; }
+  article .comment {
+    margin: 10px 20px;
+    padding: 10px;
+    width: 440px; }
+    article .comment h3.title {
+      color: #01547f;
+      font-size: 2em;
+      font-weight: bold;
+      margin: 0 0 5px 0; }
+    article .comment p.body {
+      padding: 5px; }
+    article .comment p.author {
+      text-align: right;
+      color: #5a5a5a; }
