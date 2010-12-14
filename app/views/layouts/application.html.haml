@@ -2,8 +2,8 @@
 %html
   %head
     %title Blog
-    = stylesheet_link_tag :all
-    = javascript_include_tag :all
+    = stylesheet_link_tag :all, :cache => true
+    = javascript_include_tag :all, :cache => true
     = csrf_meta_tag
   %body
     %header
