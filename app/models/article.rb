@@ -51,7 +51,6 @@ EOF
     else
       []
     end
-      
   end
 
   validates_presence_of :title, :body
